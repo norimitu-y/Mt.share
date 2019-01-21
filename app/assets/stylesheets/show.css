@@ -1,0 +1,12 @@
+.show_area {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+p {
+  margin-left: 20px;
+}
+
+.uk-card-body {
+  padding-bottom: 30px;
+}

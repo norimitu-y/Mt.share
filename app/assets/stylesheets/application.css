@@ -10,6 +10,52 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require uikit/dist/css/uikit.min.css
  *= require_tree .
  *= require_self
  */
+ html {
+   height: 2000px;
+ }
+
+ body {
+   height: 2000px;
+ }
+
+ #hr {
+   border-color: #81D8D0;
+   border-width: 10px;
+   margin-bottom: 10px;
+ }
+
+ h1 {
+   color: #2a2c2d;
+ }
+ .uk-heading-primary {
+   text-align: center;
+   font-size: 2rem;
+   margin-top: 10px;
+   margin-bottom: 10px;
+ }
+
+ .uk-icon {
+   margin-left: 15px;
+   margin-top: 5px;
+ }
+
+ .uk-iconnav {
+   margin-left: 5px;
+   margin-top: 20px;
+ }
+
+ a.uk-icon {
+   color: black;
+ }
+
+ aside {
+   height: 1000px;
+ }
+
+ .area {
+   padding-right: 15px;
+ }
