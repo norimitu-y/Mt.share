@@ -59,3 +59,7 @@
  .area {
    padding-right: 15px;
  }
+
+ .uk-search-default .uk-search-input {
+   border-color: #888e8d;
+ }

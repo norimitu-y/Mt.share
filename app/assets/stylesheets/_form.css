@@ -1,4 +1,8 @@
-.new_name {
+h3 {
+  margin-top: 15px;
+}
+
+.f_name {
   height: 36px;
   text-align: right;
   vertical-align: middle;
@@ -9,7 +13,7 @@
   line-height: 36px;
 }
 
-.new_name_form {
+.f_name_form {
   width: 80%;
   height: 30px;
   border-style: solid;
@@ -18,19 +22,14 @@
   border-radius: 5px;
 }
 
-.new_title {
-  margin-bottom: 30px;
-  margin-left: 10px;
-}
-
-.new_content_form {
+.f_content_form {
   width: 80%;
   height: 100px;
   border-color: #e5e5e5;
   border-radius: 5px;
 }
 
-.new_picture_form {
+.f_image_form {
   width: 80%;
   height: 30px;
 }
@@ -46,7 +45,7 @@
   color: #fff;
 }
 
-.btn_new {
+.btn_f {
   text-align: center;
   margin-top: 10px;
 }

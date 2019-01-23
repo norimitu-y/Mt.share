@@ -8,4 +8,6 @@
 
 .uk-card-body {
   padding-bottom: 10px;
+  padding-right: 0;
+  padding-left: 20px;
 }

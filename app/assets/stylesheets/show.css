@@ -1,5 +1,5 @@
 .show_area {
-  max-width: 70%;
+  max-width: 60%;
   margin: 0 auto;
 }
 
@@ -9,4 +9,14 @@ p {
 
 .uk-card-body {
   padding-bottom: 30px;
+}
+
+#hr {
+  border-color: #81D8D0;
+  border-width: 10px;
+  margin-bottom: 10px;
+}
+
+.uk-card {
+  margin-top: 35px;
 }
