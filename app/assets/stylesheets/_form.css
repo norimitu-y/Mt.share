@@ -53,3 +53,8 @@ h3 {
 .uk-alert-danger {
   margin-right: 15px;
 }
+
+.uk-icon-link:hover,
+.uk-icon-link:focus {
+  color: #81D8D0;
+}

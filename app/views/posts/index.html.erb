@@ -6,13 +6,13 @@
       </div>
   <% end %>
 
-  <%= search_form_for @q do |f| %>
-    <%= f.search_field :title_cont %>
-    <%= f.submit "検索" %>
-  <% end %>
-
+  <div class="search">
+    <%= search_form_for @q do |f| %>
+      <%= f.search_field :title_cont %>
+      <%= f.submit "検索" %>
+    <% end %>
+  </div>
   <hr>
-
   <% @posts.reverse_each do |post| %>
     <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-4@m uk-margin" uk-grid>
       <div class="uk-card-media-left uk-cover-container">

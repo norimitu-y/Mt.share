@@ -49,7 +49,7 @@
  }
 
  a.uk-icon {
-   color: black;
+   color: #353838;
  }
 
  aside {
@@ -62,4 +62,9 @@
 
  .uk-search-default .uk-search-input {
    border-color: #888e8d;
+ }
+
+ a.uk-icon:hover,
+ a.uk-icon:focus {
+   color: #81D8D0;
  }
