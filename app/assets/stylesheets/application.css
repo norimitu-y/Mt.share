@@ -68,3 +68,11 @@
  a.uk-icon:focus {
    color: #81D8D0;
  }
+
+ .btn_f_user {
+   margin-left: 10px;
+ }
+
+ .btn_f_user .uk-button-default {
+   border-radius: 3px;
+ }
