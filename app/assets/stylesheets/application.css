@@ -69,10 +69,7 @@
    color: #81D8D0;
  }
 
- .btn_f_user {
-   margin-left: 10px;
- }
-
- .btn_f_user .uk-button-default {
-   border-radius: 3px;
+ .current_user_area {
+   padding-top: 15px;
+   padding-bottom: 15px;
  }

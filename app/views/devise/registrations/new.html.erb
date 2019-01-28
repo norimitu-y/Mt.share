@@ -7,6 +7,17 @@
   <div uk-grid class="uk-grid-small">
     <div class="uk-width-1-3">
       <div class="uk-section uk-section-xsmall">
+        <p class="f_name line-height">名前</p>
+      </div>
+    </div>
+    <div class="uk-width-2-3">
+      <div class="uk-section  uk-section-xsmall">
+        <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "f_name_form uk-box-shadow-small" %>
+      </div>
+    </div>
+
+    <div class="uk-width-1-3">
+      <div class="uk-section uk-section-xsmall">
         <p class="f_name line-height">メールアドレス</p>
       </div>
     </div>
@@ -34,12 +45,12 @@
 
     <div class="uk-width-1-3">
       <div class="uk-section uk-section-xsmall">
-        <p class="f_name line-height">確認用パスワード</p>
+        <p class="f_name line-height">プロフィール用画像</p>
       </div>
     </div>
     <div class="uk-width-2-3">
       <div class="uk-section  uk-section-xsmall">
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "f_name_form uk-box-shadow-small" %>
+        <%= f.file_field :image, autocomplete: "image", class: "f_name_form uk-box-shadow-small" %>
       </div>
     </div>
   </div>

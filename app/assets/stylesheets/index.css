@@ -15,3 +15,9 @@
 .search {
   text-align: right;
 }
+
+.user_image {
+  width: 75px;
+height: 75px;
+object-fit: cover;
+}
