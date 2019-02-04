@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only:[:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only:[:current_user_index, :new, :create, :edit, :update, :destroy]
 
 
   def index
@@ -7,12 +8,16 @@ class PostsController < ApplicationController
     @posts = @q.result
   end
 
+  def current_user_index
+    @posts = current_user.posts.all
+  end
+
   def new
     @post = Post.new
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
       redirect_to posts_path, notice:"新しい投稿をしました"
     else
