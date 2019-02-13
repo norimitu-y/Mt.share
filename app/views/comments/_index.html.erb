@@ -1,0 +1,20 @@
+<ul>
+  <% comments.each do |comment| %>
+    <% if comment.id.present? %>
+      <div uk-grid class="uk-flex-right">
+        <div class="uk-width-3-5">
+          <div class="comment_index">
+            <li>
+              <p><%= comment.content %></p>
+            </li>
+            <p>
+              <%= link_to (post_comment_path(comment.post_id, comment.id)), method: :delete, remote: true do %>
+                <span uk-icon="trash"></span>
+              <% end %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</ul>

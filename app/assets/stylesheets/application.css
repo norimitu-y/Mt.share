@@ -74,3 +74,12 @@
    padding-bottom: 15px;
    margin-left: 7px;
  }
+
+ span.uk-icon {
+   color: #353838;
+ }
+
+ span.uk-icon:hover,
+ span.uk-icon:focus {
+   color: #81D8D0;
+ }

@@ -1,0 +1,24 @@
+<div class="f_area">
+  <%= form_with(model: [post, comment]) do |form| %>
+
+    <% if comment.errors.any? %>
+      <% comment.errors.full_messages.each do |msg| %>
+        <div uk-alert class="uk-alert-danger">
+          <a class="uk-alert-close" uk-close></a>
+          <ul>
+            <li><%= msg %></li>
+          </ul>
+        </div>
+      <% end %>
+    <% end %>
+
+    <div uk-grid class="uk-flex-right">
+      <div class="uk-width-3-5">
+        <%= form.text_field :content, class: "uk-box-shadow-small f_comment_form", placeholder: " コメント欄" %>
+      </div>
+    </div>
+    <div class="btn_comment_f">
+      <%= form.submit "コメント", class: "uk-button uk-button-default uk-button-small uk-box-shadow-medium" %>
+    </div>
+  <% end %>
+</div>

@@ -1,6 +1,7 @@
 .show_area {
   max-width: 60%;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 p {
