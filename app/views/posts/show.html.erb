@@ -10,8 +10,10 @@
 
   <hr id="hr">
   <ul class="uk-iconnav">
-    <li><a href="/" class="uk-icon-link" uk-icon="icon: home; ratio: 1.3"></a></li>
-    <li><a href="#" class="uk-icon-link" uk-icon="icon: comment; ratio: 1.3"></a></li>
+    <li>
+      <a href="/" class="uk-icon-link" uk-icon="icon: home; ratio: 1.2"></a>
+      <span class="home">HOME</span>
+    </li>
   </ul>
   <hr>
   <div class=show_area>
@@ -33,5 +35,7 @@
   <div id="comments_area">
     <%= render partial: "comments/index", locals: {comments: @comments, post: @post} %>
   </div>
+  <% if user_signed_in? %>
     <%= render partial: "comments/form", locals: {comment: @comment, post: @post} %>
+  <% end %>  
 </html>

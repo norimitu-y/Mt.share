@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
+    @comment.user_id = current_user.id
     respond_to do |format|
       if @comment.save
         format.js {render :index}
@@ -20,7 +21,7 @@ class CommentsController < ApplicationController
         format.html {redirect_to post_path(@post), notice: "削除できませんでした"}
       end
     end
-  end  
+  end
 
   private
 

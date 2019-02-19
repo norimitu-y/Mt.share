@@ -5,13 +5,19 @@
         <div class="uk-width-3-5">
           <div class="comment_index">
             <li>
+              <p>
+                <%= image_tag comment.user.image, class: "uk-border-circle user_image" %>
+                <%= comment.user.username %>
+              </p>
               <p><%= comment.content %></p>
             </li>
-            <p>
-              <%= link_to (post_comment_path(comment.post_id, comment.id)), method: :delete, remote: true do %>
-                <span uk-icon="trash"></span>
-              <% end %>
-            </p>
+            <% if comment.user == current_user %>
+              <p>
+                <%= link_to (post_comment_path(comment.post_id, comment.id)), method: :delete, remote: true do %>
+                  <span uk-icon="trash"></span>
+                <% end %>
+              </p>
+            <% end %>
           </div>
         </div>
       </div>
