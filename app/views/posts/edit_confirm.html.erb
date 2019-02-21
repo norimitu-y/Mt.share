@@ -1,16 +1,8 @@
 <div class="f_area">
-  <%= form_with(model: @post, local: true, url: choose_new_or_edit) do |form| %>
-
-    <% if @post.errors.any? %>
-      <% @post.errors.full_messages.each do |msg| %>
-        <div uk-alert class="uk-alert-danger">
-          <a class="uk-alert-close" uk-close></a>
-          <ul>
-            <li><%= msg %></li>
-          </ul>
-        </div>
-      <% end %>
-    <% end %>
+  <%= form_with(model: @post, url: posts_path, local: true) do |form| %>
+    <%= form.hidden_field :title %>
+    <%= form.hidden_field :content %>
+    <%= form.hidden_field :image %>
 
     <div uk-grid class="uk-grid-small">
       <div class="uk-width-1-5">
@@ -20,7 +12,7 @@
       </div>
       <div class="uk-width-4-5">
         <div class="uk-section  uk-section-xsmall">
-          <%= form.text_field :title, class: "f_name_form uk-box-shadow-small" %>
+          <p class="f_name line-height"><%= @post.title %></p>
         </div>
       </div>
       <div class="uk-width-1-5">
@@ -30,7 +22,7 @@
       </div>
       <div class="uk-width-4-5">
         <div class="uk-section uk-section-xsmall">
-          <%= form.text_area :content, class: "f_content_form uk-box-shadow-small" %>
+          <p class="f_name line-height"><%= @post.content %></p>
         </div>
       </div>
       <div class="uk-width-1-5">
@@ -40,7 +32,7 @@
       </div>
       <div class="uk-width-4-5">
         <div class="uk-section uk-section-xsmall">
-          <%= form.file_field :image, class: "f_image_form" %>
+          <p class="f_name line-height"><%= @post.image %></p>
         </div>
       </div>
     </div>

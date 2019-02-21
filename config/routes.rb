@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     collection do
       get :current_user_index
       post :confirm
+      patch :edit_confirm
     end
     resources :comments
   end

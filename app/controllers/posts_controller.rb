@@ -38,6 +38,10 @@ class PostsController < ApplicationController
   def edit
   end
 
+  def edit_confirm
+    @post = Post.find(post_params)
+  end
+
   def update
     if @post.update(post_params)
       redirect_to posts_path, notice:"投稿を編集をしました"

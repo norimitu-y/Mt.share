@@ -36,7 +36,9 @@
         </li>
         <% if user_signed_in? %>
           <li class="li_album">
-            <a href="posts/current_user_index" class="uk-icon-link" uk-icon="icon: album; ratio: 1.2"></a>
+            <%= link_to(current_user_index_posts_path) do %>
+              <span uk-icon="icon: album; ratio: 1.2"></span>
+            <% end %>
             <span class="album">My Page</span>
           </li>
         <% end %>
