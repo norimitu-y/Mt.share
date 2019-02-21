@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :posts do
     collection do
       get :current_user_index
+      post :confirm
     end
     resources :comments
   end
