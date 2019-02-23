@@ -1,5 +1,5 @@
 <div class="f_area">
-  <%= form_with(model: @post, local: true, url: choose_new_or_edit) do |form| %>
+  <%= form_with(model: @post, local: true, url: choose_new_or_edit ) do |form| %>
 
     <% if @post.errors.any? %>
       <% @post.errors.full_messages.each do |msg| %>
@@ -20,17 +20,17 @@
       </div>
       <div class="uk-width-4-5">
         <div class="uk-section  uk-section-xsmall">
-          <%= form.text_field :title, class: "f_name_form uk-box-shadow-small" %>
+          <%= form.text_field :title, class: "f_name_form uk-box-shadow-medium" %>
         </div>
       </div>
       <div class="uk-width-1-5">
         <div class="uk-section uk-section-xsmall">
-          <p class="f_name line-height">コメント</p>
+          <p class="f_name line-height ">コメント</p>
         </div>
       </div>
       <div class="uk-width-4-5">
         <div class="uk-section uk-section-xsmall">
-          <%= form.text_area :content, class: "f_content_form uk-box-shadow-small" %>
+          <%= form.text_area :content, class: "f_content_form uk-box-shadow-medium" %>
         </div>
       </div>
       <div class="uk-width-1-5">

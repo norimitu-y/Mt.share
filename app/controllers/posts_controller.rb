@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def index
     @q = Post.search(params[:q])
-    @posts = @q.result
+    @posts = @q.result.page(params[:page]).per(9)
   end
 
   def current_user_index
@@ -36,10 +36,6 @@ class PostsController < ApplicationController
   end
 
   def edit
-  end
-
-  def edit_confirm
-    @post = Post.find(post_params)
   end
 
   def update

@@ -61,3 +61,5 @@ gem 'mini_magick'
 gem 'ransack'
 
 gem 'devise'
+
+gem 'kaminari', '~> 0.17.0'

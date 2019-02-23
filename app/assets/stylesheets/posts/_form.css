@@ -58,3 +58,14 @@ h3 {
 .uk-icon-link:focus {
   color: #81D8D0;
 }
+
+.f_confirm {
+  text-align: left;
+  border: 0.5px solid #e5e5e5;
+  margin-right: 10px;
+  padding-left: 5px;
+}
+
+.f_confirm_image {
+  height: 450px;
+}
