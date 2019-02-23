@@ -1,4 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MtShare</title>
+    <%= csrf_meta_tags %>
 
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <hr id="hr">
+  <ul class="uk-iconnav">
+    <li>
+      <a href="/" class="uk-icon-link" uk-icon="icon: home; ratio: 1.2"></a>
+      <span class="home">HOME</span>
+    </li>
+  </ul>
+  <hr>
 <h3 class=new_user_title>新規登録する</h3>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -59,3 +76,4 @@
     <%= f.submit "登 録", class: "uk-button uk-button-default uk-button-small uk-box-shadow-medium" %>
   </div>
 <% end %>
+</html>
