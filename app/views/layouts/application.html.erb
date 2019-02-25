@@ -76,10 +76,14 @@
               </div>
             </div>
           <% else %>
-            <div class="btn_f_user">
-            <%= link_to "新 規 登 録", new_user_registration_path, class: "uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom uk-box-shadow-medium" %>
-            </div>
-            
+            <% if check_page('resigtrations', 'new') %>
+              <div class="btn_f_user">
+              <%= link_to "新 規 登 録", new_user_registration_path, class: "uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom uk-box-shadow-medium" %>
+              </div>
+              <div class="btn_f_user">
+              <%= link_to "ロ　グ　イ　ン", new_user_session_path, class: "uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom uk-box-shadow-medium" %>
+              </div>
+            <% end %>
           <% end %>
         </aside>
         <main class="uk-width-2-3@s">
