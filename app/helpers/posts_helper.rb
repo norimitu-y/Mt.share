@@ -8,6 +8,12 @@ module PostsHelper
     end
   end
 
-
+  def new_or_edit
+    if request.post?
+      posts_path
+    elsif request.patch?
+      post_path
+    end
+  end  
 
 end

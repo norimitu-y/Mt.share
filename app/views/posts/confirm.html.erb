@@ -1,6 +1,6 @@
 <div class="f_area">
   <h3 class=confirm_title>以下の内容でよろしいですか？</h3>
-  <%= form_with(model: @post, url: post_path, local: true) do |form| %>
+  <%= form_with(model: @post, url: new_or_edit, local: true) do |form| %>
     <%= form.hidden_field :title %>
     <%= form.hidden_field :content %>
     <%= form.hidden_field :image_cache %>
