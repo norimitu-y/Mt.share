@@ -9,7 +9,9 @@
         <p><%= post.content %></p>
       </div>
       <div class="icon_current_user_index">
-      <a href="/posts/<%= post.id %>/edit" class="uk-icon-link" uk-icon="file-edit"></a>
+      <%= link_to(edit_post_path(post.id)) do %>
+        <span uk-icon="icon: file-edit; ratio: 1.2"></span>
+      <% end %>
       <a href="/posts/<%= post.id %>" data-method="delete" class="uk-icon-link" uk-icon="trash"></a>
       </div>
     </div>

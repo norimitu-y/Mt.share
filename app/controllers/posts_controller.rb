@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
 
   def index
-    @q = Post.search(params[:q])
+    @q = Post.ransack(params[:q])
     @posts = @q.result.page(params[:page]).per(9)
   end
 
@@ -18,7 +18,12 @@ class PostsController < ApplicationController
   end
 
   def confirm
-    @post = Post.new(post_params)
+    if request.post?
+      @post = Post.new(post_params)
+    else
+      @post = Post.find(params[:id])
+      @post.attributes = params.require(:post).permit(:title, :content, :image, :image_cache)
+    end
   end
 
   def create
